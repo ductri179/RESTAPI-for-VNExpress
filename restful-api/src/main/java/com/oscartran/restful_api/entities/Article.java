@@ -12,6 +12,8 @@ public class Article {
 	private String description;
 	private String url;
 	
+	 public Article() {}
+	
 	public Article(Long id, String title, String des, String url) {
 		this.id = id;
 		this.title = title;

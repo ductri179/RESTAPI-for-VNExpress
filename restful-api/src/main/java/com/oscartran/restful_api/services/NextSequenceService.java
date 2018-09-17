@@ -28,4 +28,8 @@ public class NextSequenceService {
 		return counter.getSeq();
 	}
 	
+	public void reset() {
+		mongo.dropCollection(CustomSequences.class);
+	}
+	
 }
