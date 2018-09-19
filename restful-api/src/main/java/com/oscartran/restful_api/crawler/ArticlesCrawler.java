@@ -29,7 +29,7 @@ public class ArticlesCrawler {
 		
 	}
 	
-	public void crawlNewestArticles(String url) throws IOException {
+	public void crawlLatestArticles(String url) throws IOException {
 		Document doc = Jsoup.connect(url).get();
 		List<Article> articles = new ArrayList<Article>();
 		
@@ -49,7 +49,6 @@ public class ArticlesCrawler {
 		//Insert to the DB
 		articleService.deleteAll();
 		articleService.saveAll(articles);
-		System.out.println("Start Craw data");
 		
 	}
 	
